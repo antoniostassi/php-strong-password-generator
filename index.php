@@ -5,6 +5,10 @@
         
     }
 
+    function getRandomNumber($maxNumber) {
+        return rand(0,$maxNumber);
+    }
+
 ?>
 
 <!DOCTYPE html>
