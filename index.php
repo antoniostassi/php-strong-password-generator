@@ -1,22 +1,4 @@
 
-<?php 
-
-    include __DIR__.'/generation.php';
-    function generatePassword($pswLength) {
-        $generatedPassword = '';
-        for($k=0; $k<$pswLength; $k++) {
-            $charList = getRandomNumber(0,2);
-            $charListMax = getRandomNumber(0, count($generationChar[$charList]))
-            $generatePassword .= $generationChar[$charList][$charListMax];
-        }
-        return $generatedPassword;
-    }
-
-    function getRandomNumber($maxNumber) {
-        return rand(0,$maxNumber);
-    }
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +11,7 @@
 
         <main>
             <div class="container-xxl border">
-                <form action="#" method="GET">
+                <form action="./request.php" method="GET">
                     <label for="psw_length">Lunghezza desiderata:</label>
                     <input type="number" name="psw_length" id="psw_length" required>
                     <button type="submit">Invia</button>
