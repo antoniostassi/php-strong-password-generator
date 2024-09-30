@@ -1,6 +1,5 @@
 <?php
 
-    include __DIR__.'/generation.php';
     function generatePassword($pswLength, $generationChar) {
         $generatedPassword = '';
         for($k = 0; $k < $pswLength; $k++) {
@@ -18,15 +17,11 @@
             //var_dump(Generated character: $generationChar[$charList][$charListMax]);
 
         }
-        var_dump($generatedPassword);
         return $generatedPassword;
     };
 
     function getRandomNumber($maxNumber) {
         return rand(0,$maxNumber);
     };
-
-    echo "Password generata: ".generatePassword(12, $generationChar);
-    
 
 ?>
